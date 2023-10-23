@@ -177,7 +177,7 @@ exports.searchForExistence = function (obj, query, options) {
   var testProp = function (obj, key) {
     if (typeof key === 'string') {
       if (obj) {
-        if (obj[key]) {
+        if (obj.hasOwnProperty(key)) {
           return true;
         }
         else if (typeof obj[key] === 'boolean') {
